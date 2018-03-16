@@ -38,6 +38,7 @@ def search_view(request):
 
     return render(request, 'investments/search.html')
 
+@login_required(login_url="/login/")
 def add_asset(request):
     if request.method == 'POST':
         asset = request.POST.get("q")
@@ -55,8 +56,8 @@ def add_asset(request):
                 investment.asset = Stock.objects.get(symbol = request.POST.get("q"))
                 investment.save()
         return redirect('investments')
-        
-@login_required(login_url="login/")
+
+@login_required(login_url="/login/")
 def delete_asset(request):
     if request.method == 'POST':
         asset = request.POST.get("q")
@@ -71,7 +72,7 @@ def delete_asset(request):
                 investment.delete()
         return redirect('investments')
 
-@login_required(login_url="login/")
+@login_required(login_url="/login/")
 def investment_view(request):
     assets = []
     user_obj = request.user
