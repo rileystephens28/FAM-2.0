@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, "/Users/rileystephens/Documents/Django Projects/FAM/")
+sys.path.insert(0, "/Users/rileystephens/Documents/Projects/FAM/")
 import os
 os.environ['DJANGO_SETTINGS_MODULE'] = 'FAM.settings'
 from django.conf import settings
