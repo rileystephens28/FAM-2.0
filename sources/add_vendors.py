@@ -1,6 +1,9 @@
 import sys
-sys.path.insert(0, "/Users/rileystephens/Documents/Projects/FAM/")
 import os
+dir_path = str(os.path.dirname(os.path.realpath(__file__)))
+dir_path = dir_path[:-7]
+print(dir_path)
+sys.path.insert(0, dir_path)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'FAM.settings'
 from django.conf import settings
 import django
