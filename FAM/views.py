@@ -31,4 +31,4 @@ def login_view(request):
             return render(request, 'FAM/login.html', {'form': form})
     else:
         form = AuthenticationForm()
-        return render(request, 'FAM/login.html', {'form': form})
+    return render(request, 'FAM/login.html', {'form': form})

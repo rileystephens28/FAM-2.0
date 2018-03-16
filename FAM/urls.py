@@ -16,10 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from investments import views as investment_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('signup/', views.signup_view, name='signup'),
     path('login/', views.login_view, name='login'),
+    path('search/', investment_views.search_view, name="search_asset"),
+    path('search/add-asset/', investment_views.add_asset, name="add_asset"),
+    path('investments/', investment_views.investment_view, name="investments"),
+    path('investments/remove-asset', investment_views.delete_asset, name="delete_asset"),
+
 ]

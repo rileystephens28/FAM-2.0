@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'sources',
     'stocks',
     'investments',
-    'FAM'
+    'FAM',
 ]
 
 MIDDLEWARE = [
